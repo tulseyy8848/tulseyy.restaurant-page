@@ -1,24 +1,110 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Group Profile Page</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <main>
-    <section id="tulasha">
-        <h2>Tulasha Shahashankar</h2>
-        <img src="path/to/tulasha-photo.jpg" alt="Tulasha's photo" style="width:150px;height:auto;">
-        <p><strong>Student ID:</strong> 2412066</p>
-        <p><strong>Bio:</strong> Tulasha is a dedicated student with a passion for learning and technology. She enjoys coding, participating in group projects, and exploring new ideas.</p>
-        <p><strong>Contact:</strong> <a href="mailto:tulasha@example.com">tulasha@example.com</a></p>
-        <p>GitHub: <a href="https://github.com/tulasha">tulasha</a></p>
-        <p>hello</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Restaurant Name</title>
+</head>
+<body>
+    <header>
+        <h1>Restaurant Name everest restaurant Location: ghandruk,gurung gaun</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us </a></li>
+                <li><a href="#menu">Menu: </a></li>
+                <li><a href="#chef">Chef Bio   </a></li>
+                <li><a href="#reservation">Reservation</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#hours">Opening Hours</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#location">Location </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Our Restaurant</h2>
+        <p>Welcome to the Everest restaurant , where we serve delicious meals in a cozy, welcoming environment. Our goal is to provide a memorable dining experience.</p>
+        <p>We are here to serve you a deicious food to remain the taste of local nepali taste.  </p>
     </section>
-    <!-- Include other student sections here -->
-</main>
 
+    <section id="menu">
+        <h2>Menu</h2>
+        <ul>
+            <li>Dish Name - thakali set (1200)</li>
+            <li>Another Dish - dhido set(1500)</li>
+            <li>More Dishes - momo set with 10 items of momo (1000)</li>
+        </ul>
+    </section>
 
+    <section id="chef">
+        <h2>Meet Our Chef santosh shah</h2>
+        <img src="santosh.jpg" alt="Chef Name" height="100">
+        <p>Chef Name brings over 20 years of culinary expertise, combining international flavors with local ingredients to create unique dishes.</p>
+    </section>
 
+    <section id="reservation">
+        <h2>Make a Reservation</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+            <label for="time">Time:</label>
+            <input type="time" id="time" required>
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" required>
+            <button type="submit">Reserve</button>
+        </form>
+    </section>
+
+    <section id="testimonials">
+        <h2>What Our Customers Say</h2>
+        <blockquote>"The food was amazing, and the service was top-notch!"</blockquote>
+        <blockquote>"Best dining experience we’ve had in years!"</blockquote>
+    </section>
+
+    <section id="hours">
+        <h2>Opening Hours</h2>
+        <p>Monday - Friday: 11:00 AM - 9:00 PM</p>
+        <p>Saturday - Sunday: 12:00 PM - 10:00 PM</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Photo Gallery</h2>
+        <img src="thakali_set.jpg" alt="Dish 1 thakali set" height="100">
+        <img src="Dhido.jpg" alt="Dish 2" height="100">
+        <img src="Momo_nepal.jpg" alt="momo" height="100">
+        <br>
+        <img src="interior.jpg" alt="interior" height="100">
+    </section>
+
+    <section id="location">
+        <h2>Find Us</h2>
+        <div id="map"></div>
+        <p>123 Restaurant St, Food City, FC 12345</p>
+    </section>
+
+    <footer>
+        <p>Follow us on social media!</p>
+        <p>Contact: email@example.com | Phone: (123) 456-7890</p>
+        <p>&copy; 2024 Restaurant Name. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function initMap() {
+            const restaurantLocation = { lat: -25.363, lng: 131.044 };
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: restaurantLocation,
+            });
+            const marker = new google.maps.Marker({
+                position: restaurantLocation,
+                map: map,
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</body>
+</html>
